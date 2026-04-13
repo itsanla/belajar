@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Header from "@/component/header";
+import Footer from "@/component/footer";
 
 export const metadata: Metadata = {
   title: "belajar next",
@@ -16,7 +18,11 @@ export default function RootLayout({
       lang="id"
       className={`h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
